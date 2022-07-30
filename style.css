@@ -1,0 +1,344 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+/* ROOT */
+:root {
+  /* colors */
+  --body-bg: #ffffff;
+  --card-bg: #f2f2f2;
+  --color-gray: #d1d1d1;
+  --font-black: #333333;
+  --font-semi-black: #4e5150;
+  --font-orange: #f2994a;
+  --btn-cta: #f2994a;
+  --border-color-gray: #828282;
+  --font-primary: "Montserrat", sans-serif;
+}
+
+/* GLOBAL */
+html {
+  font-size: 62.5%;
+  /* 1rem=10px */
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--font-primary);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* UTILITIES */
+.container {
+  max-width: 100rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.title {
+  margin-top: 2.9rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3.6rem;
+  }
+}
+
+/*  MAIN  */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 10rem;
+  }
+}
+
+/* CHECKOUT */
+@media (min-width: 1024px) {
+  .checkout {
+    margin-top: 5rem;
+  }
+}
+
+/* CARD */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 1.2rem;
+  padding: 3rem 2.6rem;
+}
+
+.item {
+  display: flex;
+  gap: 2rem;
+}
+
+.item:nth-child(2) {
+  margin-top: 2.5rem;
+  margin-bottom: 8rem;
+}
+
+.item-image img {
+  width: 12rem;
+  height: 12.4rem;
+  border-radius: 1rem;
+}
+
+.item-details h2 {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 1024px) {
+  .item-details h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.prices p {
+  text-decoration: line-through;
+  font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .prices p {
+    font-size: 1.2rem;
+  }
+}
+
+.price-offer {
+  color: var(--font-orange);
+  font-size: 1.4rem;
+}
+
+@media (min-width: 1024px) {
+  .price-offer {
+    font-size: 1.6rem;
+  }
+}
+
+.item-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 1rem;
+  border: 1px solid #828282;
+  border-radius: 1.2rem;
+  width: 13rem;
+  height: 5rem;
+}
+
+.item-amount p {
+  font-size: 1.4rem;
+}
+
+.btn-minus,
+.btn-plus {
+  position: relative;
+  width: 1.9rem;
+  height: 1.9rem;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 0.4rem;
+}
+
+.icon-amount {
+  position: absolute;
+  top: -0.3rem;
+  left: -0.3rem;
+}
+
+.final-prices {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.final-prices p:first-child {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 1024px) {
+  .final-prices p:first-child {
+    font-size: 1.8rem;
+  }
+}
+
+hr {
+  opacity: 80%;
+}
+
+/* FORM */
+.form {
+  margin-bottom: 5rem;
+}
+
+.contact-information {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+
+.form-action {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 0.8rem;
+  left: 1rem;
+  color: var(--border-color-gray);
+}
+
+@media (min-width: 1024px) {
+  .icon {
+    top: 1.6rem;
+  }
+}
+
+.shipping-country-postal {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.3rem;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .form-label {
+    font-size: 1.2rem;
+  }
+}
+
+.input-text {
+  width: 100%;
+  height: 4rem;
+  padding-left: 4rem;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color-gray);
+}
+
+@media (min-width: 1024px) {
+  .input-text {
+    height: 5.6rem;
+    font-size: 1.6rem;
+    padding-left: 5rem;
+  }
+}
+
+.confirm {
+  display: flex;
+  align-items: center;
+}
+
+.chk-agree {
+  margin-right: 1rem;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+@media (min-width: 1024px) {
+  .chk-agree {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.agree {
+  font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .agree {
+    font-size: 1.2rem;
+  }
+}
+
+.btn-cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-cta button {
+  padding: 1.7rem 4.5rem;
+  margin-top: 2rem;
+  background-color: var(--btn-cta);
+  color: var(--body-bg);
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 1.2rem;
+}
